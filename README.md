@@ -8,7 +8,7 @@
 
 Node.js >= 22.13。
 
-部署目標為公開 GitHub Pages repository [`frobel0520/typescript-lab`](https://github.com/frobel0520/typescript-lab)。預期網站為 <https://frobel0520.github.io/typescript-lab/>；專案網站使用 `/typescript-lab/` base path，正式建置時設定 `VITE_BASE_PATH=/typescript-lab/`。GitHub Actions 負責建置與發布；Pages 實際部署與驗收仍為 pending。
+Public repository: https://github.com/frobel0520/typescript-lab. Live site: https://frobel0520.github.io/typescript-lab/. GitHub Actions validation and deployment succeeded. Build with VITE_BASE_PATH=/typescript-lab/. Browser interaction QA remains pending.
 
 ```sh
 npm ci

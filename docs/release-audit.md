@@ -1,15 +1,15 @@
 # Release audit — 0.1.0
 
-日期：2026-09-07。交付內容：10 章 / 40 題互動式 TypeScript 語法課程。現行部署目標為公開 GitHub Pages repository [`frobel0520/typescript-lab`](https://github.com/frobel0520/typescript-lab)，預期網站為 <https://frobel0520.github.io/typescript-lab/>，base path `/typescript-lab/`；實際 Pages 部署與驗收仍為 pending。
+2026-09-07: 10 chapters / 40 exercises. Public repository: https://github.com/frobel0520/typescript-lab. Live site: https://frobel0520.github.io/typescript-lab/. GitHub Pages deployment succeeded; browser interaction QA remains pending.
 
 ## GitHub Pages 遷移
 
-- GitHub Actions 建置與 Pages 發布：pending。
+- GitHub Actions validation and Pages deployment succeeded: https://github.com/frobel0520/typescript-lab/actions/runs/34118044346. Public homepage returned HTTP 200; six deployed editor/worker/compiler asset HTTP checks passed.
 - 遷移後 `npm run check`：89 項測試、型別與 lint 通過。
 - `VITE_BASE_PATH=/typescript-lab/ npm run build`：純靜態產物建置通過。
 - repository 子路徑下的頁面、worker、Monaco 與 compiler 等 8 個 HTTP 資產檢查：通過；不代表瀏覽器執行驗收。
 - GitHub Pages 真實瀏覽器、重新整理與行動版驗收：pending。
-- 公開 repository 設定：已確認；Pages 實際部署與驗收：pending。
+- Public repository and Pages deployment: complete. Browser interaction QA: pending.
 
 ## 已執行
 

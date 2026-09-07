@@ -12,7 +12,7 @@
 
 參考 [software-engineering-workshop](https://github.com/frobel0520/software-engineering-workshop) 的 AGENTS.md 與 docs/project-plan.md：專案級 Pageflow → SA → SD → 任務拆解 → 可重複驗收；完成條件通過才記錄進度。功能分支使用 feature/<task-id>。
 
-部署目標為公開 GitHub Pages repository [`frobel0520/typescript-lab`](https://github.com/frobel0520/typescript-lab)，預期網站為 <https://frobel0520.github.io/typescript-lab/>，網站 base path 為 `/typescript-lab/`，以 `VITE_BASE_PATH` 注入。GitHub Actions 的建置、發布與 Pages 瀏覽器驗收屬遷移工作，實際部署仍為 pending，尚未完成的檢查不得記為通過。先前 Sites 部署僅保留在 release-audit 作為歷史紀錄。
+GitHub delivery is complete: public repository https://github.com/frobel0520/typescript-lab and live site https://frobel0520.github.io/typescript-lab/. GitHub Actions validation, deployment, and public asset HTTP checks passed. Browser interaction QA remains pending. Previous hosting evidence is historical.
 
 工作拆分時，邊界清楚的獨立任務優先使用 Luna 以節省 token；主 agent 負責整合、衝突處理與最終驗證，避免重複執行昂貴檢查。
 
