@@ -25,6 +25,6 @@
 
 ## 部署與協作約束
 
-網站部署目標為公開 GitHub Pages repository [`frobel0520/typescript-lab`](https://github.com/frobel0520/typescript-lab)，預期網站為 <https://frobel0520.github.io/typescript-lab/>，site base path 為 `/typescript-lab/`，由 `VITE_BASE_PATH` 控制。GitHub Pages 的靜態部署、base path、資產與瀏覽器驗收在遷移檢查完成前維持 pending。
+Public GitHub Pages deployment is complete at https://frobel0520.github.io/typescript-lab/. VITE_BASE_PATH controls the /typescript-lab/ project path. Static build and deployed asset HTTP checks passed; browser interaction QA remains pending.
 
 邊界清楚的獨立任務優先交給 Luna；主 agent 負責整合與一次性的完整驗證，避免平行工作重複消耗 token。
