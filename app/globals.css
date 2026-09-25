@@ -229,6 +229,16 @@ a:focus-visible {
   align-items: center;
   font-size: 12px;
 }
+.atlas-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #9eabbe;
+  font-size: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.atlas-link:hover { color: #77caa6; text-decoration: underline; text-underline-offset: 4px; }
 .local-badge i {
   width: 6px;
   height: 6px;
