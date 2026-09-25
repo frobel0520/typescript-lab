@@ -318,6 +318,9 @@ function Lab() {
                 ? '草稿與進度已自動儲存'
                 : '正在讀取進度'}
           </span>
+          <a className="atlas-link" href="https://frobel0520.github.io/learning-atlas/" aria-label="返回 Learning Atlas 學習總入口">
+            Learning Atlas <ArrowUpRight size={14} aria-hidden="true" />
+          </a>
         </header>
         <div className="lesson-heading">
           <div>
