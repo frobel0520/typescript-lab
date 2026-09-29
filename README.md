@@ -10,7 +10,7 @@
 - `npm run check` 共 89 項測試，含型別檢查與 lint。
 - 屬於 [Learning Atlas](https://frobel0520.github.io/learning-atlas/)「程式語言」路線；站內導覽有返回 Learning Atlas 的連結（2026-09-25 起）。
 - `index.html` 載入 Harbor 維護腳本（`data-project="typescript-lab"`，2026-09-15 起），Harbor 連不上時頁面照常顯示。
-- 仍待完成：公開網址上的真實瀏覽器、行動版、鍵盤與重新整理驗收；Conditional types、`infer`、template literal types 等選修章節；跨裝置同步。
+- 2026-09-29 已完成公開站第 1 題的瀏覽器互動、鍵盤執行、草稿／進度保存與 375px 模擬視窗 smoke test；其餘題目、真實手機及完整輔助使用驗收仍待完成。選修型別章節與跨裝置同步亦未提供。
 
 詳細進度見 [progress.md](progress.md)。
 
