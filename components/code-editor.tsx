@@ -66,11 +66,12 @@ export default function CodeEditor({
           inherit: true,
           rules: [],
           colors: {
-            'editor.background': '#10151e',
-            'editorLineNumber.foreground': '#53647b',
-            'editorLineNumber.activeForeground': '#acc5e6',
-            'editor.lineHighlightBackground': '#18212e',
-            'editor.selectionBackground': '#264974',
+            'editor.background': '#171a17',
+            'editorLineNumber.foreground': '#5e665a',
+            'editorLineNumber.activeForeground': '#c9d3c4',
+            'editor.lineHighlightBackground': '#20241f',
+            'editor.selectionBackground': '#2f5661',
+            'editorGutter.background': '#171a17',
           },
         });
         monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
@@ -97,7 +98,7 @@ export default function CodeEditor({
           theme: 'tslab',
           fontSize: 15,
           lineHeight: 26,
-          fontFamily: '"Geist Mono", "SFMono-Regular", Consolas, monospace',
+          fontFamily: '"DM Mono", "SFMono-Regular", Consolas, monospace',
           minimap: { enabled: false },
           scrollBeyondLastLine: false,
           automaticLayout: true,

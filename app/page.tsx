@@ -233,8 +233,11 @@ function Lab() {
       <Sidebar>
         <SidebarHeader>
           <a className="brand" href={import.meta.env.BASE_URL} aria-label="TypeScript Lab 首頁">
-            <span className="ts-logo">ts</span>TypeScript
-            <span className="brand-light"> / lab</span>
+            <span className="brand-mark" aria-hidden="true">TS</span>
+            <span className="brand-text">
+              <b>TypeScript Lab</b>
+              <small>語法實戰 / SYNTAX LAB</small>
+            </span>
           </a>
         </SidebarHeader>
         <SidebarContent>
