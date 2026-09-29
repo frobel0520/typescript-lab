@@ -8,10 +8,12 @@
 
 2026-09-15 接上 Harbor 主控台的維護畫面（PR #1，`4b21dcd`）：`index.html` 的 `<head>` 載入 Harbor 前端腳本（`data-project=typescript-lab`），維護模式時顯示全螢幕維護畫面、有公告時顯示底部公告列，Harbor 連不上時頁面照常顯示；GitHub Pages 部署後線上已確認載入腳本。
 
-仍待完成：GitHub Pages 真實瀏覽器操作、重新整理、行動版與鍵盤支援 QA；Conditional types、`infer`、template literal types 等選修課程；學習紀錄跨裝置同步目前也未提供。
+2026-09-29 已在公開站完成第 1 題真實瀏覽器 smoke test：錯誤回饋、正解通關、⌘+Enter 執行、重新整理後草稿與進度保存均正常；375px 模擬視窗可開章節側欄並切換章節。這不等於全部題目或真實手機驗收。
+
+仍待完成：其餘課程的瀏覽器操作、真實手機、完整鍵盤與輔助使用驗收；Conditional types、`infer`、template literal types 等選修課程；學習紀錄跨裝置同步目前也未提供。
 
 下一步：
 
-1. 在公開 Pages 網址執行桌面、行動版、鍵盤與重新整理流程驗收，記錄結果。
+1. 在公開 Pages 網址擴大桌面、真實手機、鍵盤與輔助使用驗收，記錄其餘題目及邊界結果。
 2. 視需求規劃並加入選修型別章節，再補齊對應測試與建置驗證。
 3. 邊界清楚的獨立工作優先交給 Luna，以節省 token；主 agent 負責整合與最終驗證。

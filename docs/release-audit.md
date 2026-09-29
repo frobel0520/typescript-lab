@@ -1,6 +1,6 @@
 # Release audit — 0.1.0
 
-2026-09-07: 10 chapters / 40 exercises. Public repository: https://github.com/frobel0520/typescript-lab. Live site: https://frobel0520.github.io/typescript-lab/. GitHub Pages deployment succeeded; browser interaction QA remains pending.
+2026-09-07: 10 chapters / 40 exercises. Public repository: https://github.com/frobel0520/typescript-lab. Live site: https://frobel0520.github.io/typescript-lab/. GitHub Pages deployment succeeded; one-exercise browser smoke test completed on 2026-09-29, broader interaction QA remains pending.
 
 ## GitHub Pages 遷移
 
@@ -8,8 +8,8 @@
 - 遷移後 `npm run check`：89 項測試、型別與 lint 通過。
 - `VITE_BASE_PATH=/typescript-lab/ npm run build`：純靜態產物建置通過。
 - repository 子路徑下的頁面、worker、Monaco 與 compiler 等 8 個 HTTP 資產檢查：通過；不代表瀏覽器執行驗收。
-- GitHub Pages 真實瀏覽器、重新整理與行動版驗收：pending。
-- Public repository and Pages deployment: complete. Browser interaction QA: pending.
+- 2026-09-29 公開站真實瀏覽器 smoke test：第 1 題起始碼顯示 2 個型別錯誤；輸入正確解後以 ⌘+Enter 執行，4/4 檢查通過，進度變為 1/40；重新整理後解答草稿與 1/40 進度仍在。375px 模擬視窗可閱讀練習內容、開啟章節側欄並切到第 2 章。
+- Public repository and Pages deployment: complete. 上述只涵蓋一題與模擬 375px；40 題逐題、真實手機、螢幕閱讀器與完整鍵盤巡覽仍 pending。
 
 ## 已執行
 
@@ -26,7 +26,7 @@
 
 ## 驗證邊界
 
-遷移前未執行瀏覽器點擊、截圖或 mobile / zoom / screen-reader QA；不能把模擬 DOM 測試視為真實瀏覽器驗收。GitHub Pages 遷移後的實際瀏覽器驗收仍 pending。響應式 CSS、語意標籤、鍵盤支援與 reduced-motion 已實作，但仍需實際操作驗收。
+遷移前未執行瀏覽器點擊、截圖或 mobile / zoom / screen-reader QA；不能把模擬 DOM 測試視為真實瀏覽器驗收。2026-09-29 已補一題的線上互動與 375px 模擬視窗 smoke test；真實手機、zoom、screen-reader 及完整課程操作仍待驗收。響應式 CSS、語意標籤、鍵盤支援與 reduced-motion 已實作，尚未全面實機確認。
 
 Monaco 0.52.2 的即時語言服務與正式檢查的 TS 5.9.3 版本不同；核心教材語法兩者都支援，正式過關以執行時檢查為準。
 
