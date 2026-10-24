@@ -43,3 +43,12 @@ Conditional types、infer、template literal types 深入課程不計入本次 4
 ## 收尾修正
 
 遷移前本機 server 的瀏覽器錯誤轉送紀錄揭露 Monaco worker 從 blob URL 解析 root-relative AMD path 失敗；當時已修正並重新執行型別檢查、lint 與建置。這項歷史紀錄不是 GitHub Pages base path 的完整瀏覽器互動驗收。
+
+## 2026-10-24 安全修補（SEC-P1-TS）
+
+- `vite` 從 8.2.2 更新至 8.3.5，`body-parser` 間接開發依賴從 2.3.0 更新至 2.4.0；其餘 lockfile 變更是這些相容更新的傳遞依賴。
+- npm 官方 advisory 查核修補前有 2 項 high（Vite、body-parser），修補後 `npm audit` 為 0 vulnerabilities（critical 0、high 0）。
+- 以 portable Node 24.22.1、npm 11.12.1 執行 `npm ci --ignore-scripts`；之後 `npm test` 89/89、`npm run typecheck`、`npm run lint`、`npm run build` 均通過。建置輸出為 205.23 kB CSS、360.83 kB JS（gzip 分別 31.27 kB、117.62 kB）。
+- Bundle 效能回歸：在相同來源 commit `990264611dd291994d0ca3d7e218d046c67ed16b` 下，以基底原 lockfile（Vite 8.2.2、body-parser 2.3.0）與修補 lockfile（Vite 8.3.5、body-parser 2.4.0）分別乾淨安裝並建置；環境為 Windows、Node 24.22.1、npm 11.12.1，兩次 `npm ci --ignore-scripts`。使用 Node `zlib.gzipSync` level 9 計算輸出 bytes：CSS 205,237 bytes / gzip 31,093 bytes，前後相同；JS 基準 361,202 / gzip 116,418 bytes，修補後 360,838 / gzip 116,355 bytes（原始 -0.10%、gzip -0.05%），低於 5% 增幅門檻。
+- 此差異只量測靜態 bundle 大小；開發工具依賴沒有進入正式 runtime dependencies，正式 API 延遲、互動 p50/p95、CPU／記憶體及正式環境效能指標不適用。本次未做正式站效能量測，bundle 大小不能代替正式 runtime 效能驗收。
+- 整合驗證另以 Chromium 在 1280px／375px 真實鍵盤輸入第一題合成解答，通過型別檢查、執行與課程驗收；手機章節側欄可切換。兩種寬度無 page error／水平溢出，外部網路封鎖，未使用真實學習紀錄。這只驗證一條核心流程，不替代完整 40 題正式驗收；未部署。
